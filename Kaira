@@ -1,0 +1,137 @@
+import nltk
+from nltk.chat.util import Chat, reflections
+reflections = {
+  "i am"       : "you are",
+  "i was"      : "you were",
+  "i"          : "you",
+  "i'm"        : "you are",
+  "i'd"        : "you would",
+  "i've"       : "you have",
+  "i'll"       : "you will",
+  "my"         : "your",
+  "you are"    : "I am",
+  "you were"   : "I was",
+  "you've"     : "I have",
+  "you'll"     : "I will",
+  "your"       : "my",
+  "yours"      : "mine",
+  "you"        : "me",
+  "me"         : "you"
+}
+pairs = [
+    [
+        r"my name is (.*)",
+        ["Hello %1, How are you today ?",]
+    ],
+    [
+        r"hi|hey|hello",
+        ["Hello", "Hey there",]
+    ], 
+    [
+        r"what is your name ?",
+        ["I am a bot created by Ankur, Hrugved, Samarth and Satya. you can call me crazy!",]
+    ],
+    [
+        r"how are you ?",
+        ["I'm doing good, How about You ?",]
+    ],
+    [
+        r"sorry (.*)",
+        ["Its alright","Its OK, never mind",]
+    ],
+    [
+        r"I am fine",
+        ["Great to hear that, How can I help you?",]
+    ],
+    [
+        r"Who teaches us chemistry|Who is your Chemistry Teacher|Chemistry Teacher",
+        ["Vaishnavi Ma'am",]
+    ],
+    [
+        r"Who teaches us Math|Who is your Mathematics Teacher|Math Teacher",
+        ["Snehal Ma'am",]
+    ],
+    [
+        r"Who teaches us Physics|Who is your Physics Teacher|Physics Teacher",
+        ["Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am",
+         "Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am",
+         "Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am","Durga Ma'am","🤧🤧","yeah..."]
+    ],
+    [
+        r"Who teaches us IP|Who is your IP Teacher|IP Teacher",
+        ["Anuprita Ma'am",]
+    ],
+    [
+        r"Who teaches us English|Who is your English Teacher|English Teacher",
+        ["Varsha Ma'am",]
+    ],
+    [
+        r"Add (.*) and (.*)|Add (.*),(.*)",
+        ["Visit https://www.google.com/search?q=sum+of+%1+and+%2","Visit https://www.bing.com/search?q=sum+of+%1+and+%2",
+         "Visit https://www.ecosia.com/search?q=sum+of+%1+and+%2"]
+    ],
+    [
+        r"Sub (.*) From (.*)|Sub (.*),(.*)",
+        ["Visit https://www.google.com/search?q=sub+%1+from+%2","Visit https://www.bing.com/search?q=sub+%1+from+%2",
+         "Visit https://www.ecosia.com/search?q=sub+%1+from+%2"]
+    ],
+    [
+        r"i'm (.*) doing good",
+        ["Nice to hear that","How can I help you?:)",]
+    ],
+    [
+        r"(.*) age?",
+        ["I'm a computer program dude Seriously you are asking me this?",]
+    ],
+    [
+        r"what (.*) want ?",
+        ["Make me an offer I can't refuse",]
+    ],
+    [
+        r"(.*) created ?",
+        ["Satya created me using Python's NLTK library ","top secret ;)",]
+    ],
+    [
+        r"(.*) (location|city) ?",
+        ['Indore, Madhya Pradesh',]
+    ],
+    [
+        r"how is the weather in (.*)?",
+        ["Weather in %1 is awesome like always","Too hot man here in %1","Too cold man here in %1","Never even heard about %1"]
+    ],
+    [
+        r"i work in (.*)?",
+        ["%1 is an Amazing company, I have heard about it. But they are in huge loss these days.",]
+    ],
+    [
+        r"(.*)raining in (.*)",
+        ["No rain since last week here in %2","Damn its raining too much here in %2"]
+    ],
+    [
+        r"how (.*) health(.*)",
+        ["I'm a computer program, so I'm always healthy ",]
+    ],
+    [
+        r"(.*) (sports|game) ?",
+        ["I'm a very big fan of Football",]
+    ],
+    [
+        r"who (.*) sportsperson ?",
+        ["Messy","Ronaldo","Roony"]
+    ],
+    [
+        r"who (.*) (moviestar|actor)?",
+        ["Who ever you Wish","Bangad"]
+    ],
+    [
+        r"quit",
+        ["BbBye take care. See you soon :) ","It was nice talking to you. See you soon :)"]
+    ],
+]
+def chat():
+    print("Hi! I am a Kaira built to help you")
+    chat = Chat(pairs, reflections)
+    chat.converse()
+#initiate the conversation
+if __name__ == "__main__":
+    chat()
