@@ -1,0 +1,48 @@
+from tkinter import *
+root = Tk()
+root.title("Chatbot")
+def send():
+    send = "You -> "+e.get()
+    txt.insert(END, "n"+send)
+    user = e.get().lower()
+    if(user == "hello"):
+        txt.insert(END, "n" + "Bot -> Hi")
+    elif(user == "hi" or user == "hii" or user == "hiiii" or user == "hiii" or user == "hiiiii"):
+        txt.insert(END, "n" + "Bot -> Hello")
+    elif(e.get() == "how are you"):
+        txt.insert(END, "n" + "Bot -> fine! and you")
+    elif(user == "fine" or user == "i am fine" or user == "i am doing good"):
+        txt.insert(END, "n" + "Bot -> Great! how can I help you")
+    elif(e.get() == "Please tell me about your college and the admission criteria required"):
+        txt.insert(END, "n" + "Bot -> Please be sitted sir will get back to you in few minutes.")
+    elif(e.get() == "Please hurry up mam it is getting late for me."):
+        txt.insert(END, "n" + "Bot -> Sorry for the inconvenience Sir,Please tell me how can i help you")
+    elif(e.get() == "Please tell me the streams you are offering for 11th and 12th"):
+        txt.insert(END, "n" + "Bot -> In our college we are offering science and commerce for the students interested to take admission over here.")
+    elif(e.get() == "What are the subjects that you offer to the students in the science stream?"):
+        txt.insert(END, "n" + "Bot -> In science stream Phy,Chem and Eng are the compulsory subjects and there is an choice between Math and Bio for 4th subject,for the 5th subject there is choice between IP/PE.") 
+    elif(e.get() == "What about commerce?"):
+        txt.insert(END, "n" + "Bot -> In commerce we offer Accountancy,English,Business studies, PE/IP, Economics,Maths, there are options for 2 subjects in commerce stream also.")
+    elif(e.get() == "What about the faculties are they experienced in teaching?"):
+        txt.insert(END, "n" + "Bot -> Yes we are having one of the best teaching faculties in our college with an experience of about 10-12 years of teaching, we are also having some young teachers who are reaaly good in teaching.")
+    elif(e.get() == "It seems that this would be the right college for my son"):
+        txt.insert(END, "n" + "Bot -> Yes really, you are on the right path, would you please tell me the score of your son in 10th?")
+    elif(user == "88.4%" or user == "92.4%"):
+        txt.insert(END, "n" + "Bot -> That sounds good, it will be really very easy for your son to get admission over here with such good marks.")
+    elif(e.get() == "Thanks for your words,is there any prospectus available with you?"):
+        txt.insert(END, "n" + "Bot -> Yes, the prospectus will cost Rs.550 with that you will get the admission form.")
+    elif(e.get() == "Ok Thanks, would i get to know the fees and the documents required for the admission process."):
+        txt.insert(END, "n" + "Bot -> All the required documents and the fee structure is given in the prospectus, and please note that an interview will also be conducted before confirming your child's admission.")
+    elif(e.get() == "Thanks once again for your cooperation mam."):
+        txt.insert(END, "n" + "Bot -> Welcome sir, Visit again..........")
+    else:
+        txt.insert(END, "n" + "Bot -> Sorry! I dind't get you")
+    if(user == "What can you do"):
+        txt.insert(END)
+    e.delete(0, END)
+txt = Text(root)
+txt.grid(row=0, column=0, columnspan=2)
+e = Entry(root, width=100)
+e.grid(row=1, column=0)
+send = Button(root, text="Send", command=send).grid(row=1, column=1)
+root.mainloop()
