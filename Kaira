@@ -29,7 +29,7 @@ pairs = [
     ], 
     [
         r"what is your name ?",
-        ["I am a bot created by Ankur, Hrugved, Samarth and Satya. you can call me crazy!",]
+        ["I am a bot created by Ankur, Hrugved, Samarth and Satya.",]
     ],
     [
         r"how are you ?",
@@ -53,7 +53,7 @@ pairs = [
     ],
     [
         r"Who teaches us Physics|Who is your Physics Teacher|Physics Teacher",
-        ["Durga Ma'am"]
+        ["Durga Ma'am",]
     ],
     [
         r"Who teaches us IP|Who is your IP Teacher|IP Teacher",
@@ -64,14 +64,72 @@ pairs = [
         ["Varsha Ma'am",]
     ],
     [
-        r"Add (.*) and (.*)|Add (.*),(.*)",
-        ["Visit https://www.google.com/search?q=sum+of+%1+and+%2","Visit https://www.bing.com/search?q=sum+of+%1+and+%2",
-         "Visit https://www.ecosia.com/search?q=sum+of+%1+and+%2"]
+        r"Add (.*) and (.*)",
+        ["Please Visit https://www.google.com/search?q=sum+of+%1+and+%2","Please Visit https://www.bing.com/search?q=sum+of+%1+and+%2",
+         "Please Visit https://www.ecosia.com/search?q=sum+of+%1+and+%2"]
     ],
     [
-        r"Sub (.*) From (.*)|Sub (.*),(.*)",
-        ["Visit https://www.google.com/search?q=sub+%1+from+%2","Visit https://www.bing.com/search?q=sub+%1+from+%2",
-         "Visit https://www.ecosia.com/search?q=sub+%1+from+%2"]
+        r"Sub (.*) From (.*)",
+        ["Please Visit https://www.google.com/search?q=sub+%1+from+%2","Please Visit https://www.bing.com/search?q=sub+%1+from+%2",
+         "Please Visit https://www.ecosia.com/search?q=sub+%1+from+%2"]
+    ],
+    [
+        r"Divide (.*) by (.*)",
+        ["Please Visit https://www.google.com/search?q=Divide+%1+by+%2","Please Visit https://www.bing.com/search?q=Divide+%1+by+%2",
+         "Please Visit https://www.ecosia.com/search?q=Divide+%1+by+%2"]
+    ],
+    [
+        r"Multiply (.*) with (.*)",
+        ["Please Visit https://www.google.com/search?q=%1+times+%2","Please Visit https://www.bing.com/search?q=%1+times+%2",
+         "Please Visit https://www.ecosia.com/search?q=%1+times+%2"]
+    ],
+    [
+        r"Google (.*) (.*) (.*) (.*) (.*) (.*)",
+        ["Alright!! Visit --> https://www.google.com/search?q=%1+%2+%3+4%+5%+6%",]
+    ],
+    [
+        r"Google (.*) (.*) (.*) (.*) (.*)",
+        ["Alright!! Visit --> https://www.google.com/search?q=%1+%2+%3+4%+5%",]
+    ],
+    [
+        r"Google (.*) (.*) (.*) (.*)",
+        ["Alright!! Visit --> https://www.google.com/search?q=%1+%2+%3+%4",]
+    ],
+    [
+        r"Google (.*) (.*) (.*)",
+        ["Alright!! Visit --> https://www.google.com/search?q=%1+%2+%3",]
+    ],
+    [
+        r"Google (.*) (.*)",
+        ["Alright!! Visit --> https://www.google.com/search?q=%1+%2",]
+    ],
+    [
+        r"Google (.*)",
+        ["Alright!! Visit --> https://www.google.com/search?q=%1",]
+    ],
+    [
+        r"Bing (.*) (.*) (.*) (.*) (.*) (.*)",
+        ["Alright!! Visit --> https://www.Bing.com/search?q=%1+%2+%3+4%+5%+6%",]
+    ],
+    [
+        r"Bing (.*) (.*) (.*) (.*) (.*)",
+        ["Alright!! Visit --> https://www.Bing.com/search?q=%1+%2+%3+4%+5%",]
+    ],
+    [
+        r"Bing (.*) (.*) (.*) (.*)",
+        ["Alright!! Visit --> https://www.Bing.com/search?q=%1+%2+%3+%4",]
+    ],
+    [
+        r"Bing (.*) (.*) (.*)",
+        ["Alright!! Visit --> https://www.Bing.com/search?q=%1+%2+%3",]
+    ],
+    [
+        r"Bing (.*) (.*)",
+        ["Alright!! Visit --> https://www.Bing.com/search?q=%1+%2",]
+    ],
+    [
+        r"Bing (.*)",
+        ["Alright!! Visit --> https://www.Bing.com/search?q=%1",]
     ],
     [
         r"i'm (.*) doing good",
@@ -86,8 +144,8 @@ pairs = [
         ["Make me an offer I can't refuse",]
     ],
     [
-        r"(.*) created ?",
-        ["Satya created me using Python's NLTK library ","top secret ;)",]
+        r"(.*) created you ?",
+        ["top secret ;)",]
     ],
     [
         r"(.*) (location|city) ?",
@@ -95,7 +153,7 @@ pairs = [
     ],
     [
         r"how is the weather in (.*)?",
-        ["Weather in %1 is awesome like always","Too hot man here in %1","Too cold man here in %1","Never even heard about %1"]
+        ["Weather in %1 is awesome like always","Too hot man here in %1","Too cold man here in %1","Never even heard about %1","Visit --> https://www.google.com/search?q=weather+in+%1"]
     ],
     [
         r"i work in (.*)?",
@@ -115,11 +173,11 @@ pairs = [
     ],
     [
         r"who (.*) sportsperson ?",
-        ["Messy","Ronaldo","Roony"]
+        ["Messy","Ronaldo",]
     ],
     [
         r"who (.*) (moviestar|actor)?",
-        ["Who ever you Wish","Bangad"]
+        ["Who ever you Wish",]
     ],
     [
         r"quit",
